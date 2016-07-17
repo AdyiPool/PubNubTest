@@ -7,8 +7,24 @@
   <link rel="stylesheet" href="style.css"/>
   <style></style>
 
-  <script src="script.js"></script>
-  <script></script>
+<script type="text/javascript" src="//pubnub.github.io/eon/v/eon/0.0.10/eon.js"></script>
+<link type="text/css" rel="stylesheet" href="//pubnub.github.io/eon/v/eon/0.0.10/eon.css"/>
+<div id="chart"></div>
+<script>
+  var pubnub = PUBNUB.init({
+    publish_key:   'demo', // replace with your own pub-key
+    subscribe_key: 'demo' // replace with your own sub-key
+  });
+
+  eon.chart({
+    pubnub: pubnub,
+    channel: "c3-spline", // the pubnub channel for real time data
+    generate: {           // c3 chart object
+      bindto: '#chart'
+    }
+  });
+</script>
+
 </head>
 
 <body>
