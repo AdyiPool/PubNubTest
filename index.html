@@ -12,6 +12,7 @@
 <div id="chart"></div>
 <script>
   var pubnub = PUBNUB.init({
+    ssl: true,
     publish_key:   'pub-c-253d9808-4245-4291-a886-11ffc7fbd99c', // replace with your own pub-key
     subscribe_key: 'sub-c-a7f1dc76-fd29-11e5-8180-0619f8945a4f' // replace with your own sub-key
   });
